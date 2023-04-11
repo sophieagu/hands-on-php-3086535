@@ -2,6 +2,17 @@
 	function get_visitors() {
 		return file_get_contents('visits.txt');
 	}
+    function log_visit() {
+        $visits = (int)file_get_contents('visits.txt');
+        $visits++;
+        file_put_contents('visits.txt', $visits);
+    }
+    
+    if( ! isset($_COOKIE['visited'])) {
+        setcookie( 'visited', true, time()+(86400 *30));
+        log_visit();
+    }
+    log_visit();
 ?>
 <!DOCTYPE html>
 <html>
