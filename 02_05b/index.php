@@ -8,8 +8,26 @@ function print_array($a) {
 
 
  function sanitize_form() {
-
+	print_array($_POST);
+	foreach($_POST as $name => $value ) {
+		switch($name) {
+			case 'email';
+				$value = filter_var($value, FILTER_SANITIZE_EMAIL);
+				break;
+			case 'message':
+				$value = filter_var(htmlspecialchars($value), FILTER_SANITIZE_ADD_SLASHES);
+				break;
+			default: 
+				$value = filter_var(preg_replace('/[^A-Za-z0-9 \-]', '', $value), FILTER_SANITIZE_ADD_SLASHES);
+		}
+		$_POST[$name] = $value;
+	}
 	return true;
+ }
+
+ if(isset($_POST['submit'])) {
+	sanitize_form();
+	print_array( $_POST);
  }
 ?>
 
