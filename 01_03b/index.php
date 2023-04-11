@@ -25,5 +25,5 @@ for( $i = 0; $i < 1000; $i++) {
 	${$flip}++;
 }
 
-echo '<p>Heads was flipped.' . $H/10 . '% of the time. Tails was flipped' . $T/10 . '%.';
+echo '<p>Heads was flipped ' . $H/10 . '% of the time. Tails was flipped ' . $T/10 . '%.';
 
