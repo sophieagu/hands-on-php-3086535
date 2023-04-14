@@ -3,7 +3,7 @@
 function log_form()
 {
 	$timestamp = date("Ymd-His");
-	$filename = "formlog-" + $timestamp + ".txt";
+	$filename = "formlog-" . $timestamp . ".txt";
 	$file = fopen($filename, "w");
 	fwrite($file, print_r($_POST, true));
 	fclose($file);
