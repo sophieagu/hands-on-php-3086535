@@ -18,19 +18,19 @@ function print_array($a)
 
 function sanitize_form()
 {
-	print_array($_POST);
+	//print_array($_POST);
 	foreach ($_POST as $name => $value) {
 		switch ($name) {
 			case 'email':
-				echo 'in email';
+				//echo 'in email';
 				$value = filter_var($value, FILTER_SANITIZE_EMAIL);
 				break;
 			case 'message':
-				echo 'in email';
+				//echo 'in email';
 				$value = filter_var(htmlspecialchars($value), FILTER_SANITIZE_ADD_SLASHES);
 				break;
 			case 'phone':
-				echo 'in phone';
+				//echo 'in phone';
 				$value = filter_var(htmlspecialchars($value));
 				break;
 			default:
