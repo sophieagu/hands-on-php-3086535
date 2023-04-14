@@ -53,7 +53,7 @@ if (isset($_COOKIE['form_submitted'])) {
 	sanitize_form();
 	print_array($_POST);
 	log_form();
-	setcookie('form_submitted', 'true', time() + 3600);
+	//setcookie('form_submitted', 'true', time() + 3600);
 }
 
 
