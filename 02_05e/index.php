@@ -32,6 +32,7 @@ function sanitize_form()
 			case 'phone':
 				echo 'in phone';
 				$value = filter_var(htmlspecialchars($value));
+				break;
 			default:
 				$value = filter_var(preg_replace('/[^A-Za-z0-9 \-]/', '', $value), FILTER_SANITIZE_ADD_SLASHES);
 		}
