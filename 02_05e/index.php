@@ -52,17 +52,6 @@ if (isset($_POST['submit'])) {
 		setcookie('form_submitted', 'true', time() + 3600);
 	}
 
-if (isset($_COOKIE['form_submitted'])) {
-	echo 'Oops! Looks like you have already submitted this form.';
-	unset($_COOKIE['form_submitted']);
-} else {
-	sanitize_form();
-	//print_array($_POST);
-	log_form();
-	setcookie('form_submitted', 'true');
-}
-
-
 ?>
 
 <!DOCTYPE html>
