@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
 		sanitize_form();
 		//print_array($_POST);
 		log_form();
-		setcookie('form_submitted', 'true', time() + 3600);
+		setcookie('form_submitted', 'true', time() + 2);
 	}
 }
 ?>
