@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 		log_form();
 		setcookie('form_submitted', 'true', time() + 3600);
 	}
-
+}
 ?>
 
 <!DOCTYPE html>
