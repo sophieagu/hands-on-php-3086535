@@ -51,10 +51,10 @@ if (isset($_POST['submit'])) {
 if (isset($_COOKIE['form_submitted'])) {
 	echo 'Oops! Looks like you have already submitted this form.';
 } else {
-	setcookie('form_submitted', 'true', time() + 3600);
 	sanitize_form();
 	//print_array($_POST);
 	log_form();
+	setcookie('form_submitted', 'true', time() + 3600);
 }
 
 
