@@ -1,0 +1,8 @@
+Array
+(
+    [name] => joe casabona
+    [email] => soph@gmail.com
+    [phone] => (786) 678-7777
+    [message] => hii
+    [submit] => Contact Me
+)
