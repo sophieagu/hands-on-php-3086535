@@ -7,7 +7,6 @@ function log_form()
 	$file = fopen($filename, "w");
 	fwrite($file, print_r($_POST, true));
 	fclose($file);
-	setcookie('form_submitted', 'true', time() + 0);
 }
 
 function print_array($a)
@@ -55,6 +54,8 @@ if (isset($_COOKIE['form_submitted'])) {
 	sanitize_form();
 	//print_array($_POST);
 	log_form();
+	setcookie('form_submitted', 'true', time() + 0);
+	echo 'Form submitted successfully!';
 }
 
 
