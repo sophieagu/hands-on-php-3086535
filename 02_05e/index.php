@@ -44,7 +44,7 @@ function sanitize_form()
 
 if (isset($_POST['submit'])) {
 	sanitize_form();
-	print_array($_POST);
+	//print_array($_POST);
 	log_form();
 }
 
@@ -52,7 +52,7 @@ if (isset($_COOKIE['form_submitted'])) {
 	echo 'form has already been submitted';
 } else {
 	sanitize_form();
-	print_array($_POST);
+	//print_array($_POST);
 	log_form();
 	//setcookie('form_submitted', 'true', time() + 3600);
 }
