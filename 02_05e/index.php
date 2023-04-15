@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
 }
 
 if (isset($_COOKIE['form_submitted'])) {
-	echo 'Oops! Looks like you have already submitted this form.';
+	//echo 'Oops! Looks like you have already submitted this form.';
 } else {
 	sanitize_form();
 	//print_array($_POST);
