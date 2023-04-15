@@ -1,7 +1,7 @@
 Array
 (
-    [name] => joe casabona
-    [email] => soph@gmail.com
+    [name] => joe casabonadr
+    [email] => sogph@gmail.com
     [phone] => (786) 678-7777
     [message] => hi
     [submit] => Contact Me
