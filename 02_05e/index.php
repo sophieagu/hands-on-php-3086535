@@ -43,10 +43,14 @@ function sanitize_form()
 }
 
 if (isset($_POST['submit'])) {
-	sanitize_form();
-	//print_array($_POST);
-	log_form();
-}
+	if (isset($_COOKIE['form_submitted'])) {
+		echo 'Oops! Looks like you have already submitted this form.';
+	} else {
+		sanitize_form();
+		//print_array($_POST);
+		log_form();
+		setcookie('form_submitted', 'true', time() + 3600);
+	}
 
 if (isset($_COOKIE['form_submitted'])) {
 	echo 'Oops! Looks like you have already submitted this form.';
