@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
 }
 
 if (isset($_COOKIE['form_submitted'])) {
-	echo 'form has already been submitted';
+	echo 'Oops! Looks like you have already submitted this form.';
 } else {
 	setcookie('form_submitted', 'true', time() + 3600);
 	sanitize_form();
