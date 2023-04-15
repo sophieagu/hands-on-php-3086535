@@ -45,6 +45,7 @@ function sanitize_form()
 if (isset($_POST['submit'])) {
 	if (isset($_COOKIE['form_submitted'])) {
 		echo 'Oops! Looks like you have already submitted this form.';
+		unset($_POST['submit']);
 	} else {
 		sanitize_form();
 		//print_array($_POST);

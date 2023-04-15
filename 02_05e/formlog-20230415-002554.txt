@@ -1,8 +1,0 @@
-Array
-(
-    [name] => joe casabonadrdu
-    [email] => sophieagu12@gmail.com
-    [phone] => (786) 678-7779
-    [message] => ho
-    [submit] => Contact Me
-)

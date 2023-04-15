@@ -1,8 +1,0 @@
-Array
-(
-    [name] => joes casabonae
-    [email] => lulu@gmail.com
-    [phone] => (786) 078-8777
-    [message] => test
-    [submit] => Contact Me
-)
