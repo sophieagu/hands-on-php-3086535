@@ -56,7 +56,6 @@ if (isset($_COOKIE['form_submitted'])) {
 	//print_array($_POST);
 	log_form();
 	setcookie('form_submitted', 'true');
-	echo 'Form submitted successfully!';
 }
 
 
